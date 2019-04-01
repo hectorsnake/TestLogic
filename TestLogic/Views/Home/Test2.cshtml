@@ -1,0 +1,26 @@
+﻿@using System.Collections.Generic
+@model Dictionary<int,string>
+@{
+	ViewData["Title"] = "Test2";
+}
+
+<h1>Test2</h1>
+
+<div class="row">
+	<div class="col-sm-12 col-md-6">
+		Write a function that Print numbers from 1 to 200 and every time a number is divisible by 3,
+		print the word "fizz" instead of the number; every time the number is divisible by 5 print the
+		number "buzz" and every time the number is divisible by both (3 & 5) print the word "fizzbuzz".
+	</div>
+	<div class="clearfix" ></div>
+	<div class="col-md-12 offset-md-4">
+		@foreach(KeyValuePair<int,string> kvp in Model) {
+		@kvp.Key  @Html.Raw(" : ")  @kvp.Value
+		<br />
+		}
+	</div>
+
+	<div>
+		<a href="/home">Go back</a>
+	</div>
+</div>

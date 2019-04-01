@@ -1,0 +1,36 @@
+﻿@using TestLogic.Models
+@model ReverseModel
+@{
+	ViewData["Title"] = "Test6";
+}
+
+<h1>Test6</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			6. Write a function that reverses a string in a memory-efficient manner and without using the <b>Enumerable.Reverse(IEnumerable&#60;TSource&#62;)</b> extension method.
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-6">
+			<form method="post">
+				<div class="form-group">
+					<label asp-for="StringValue" class="control-label"></label>
+					<input asp-for="StringValue" class="form-control" />
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Reverse" class="btn btn-default" />
+				</div>
+			</form>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-12 offset-md-4">
+			<div class="form-group">
+				<label class="control-label">@ViewData["Result"]</label>
+			</div>
+		</div>
+
+		<div>
+			<a href="/home">Go back</a>
+		</div>
+	</div>
+</div>

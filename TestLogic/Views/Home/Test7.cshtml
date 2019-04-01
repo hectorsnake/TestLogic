@@ -1,0 +1,40 @@
+﻿@using TestLogic.Models
+@model SwapNumbers
+@{
+	ViewData["Title"] = "Test7";
+}
+
+<h1>Test7</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			7. Write a function that swaps two integers without using a temporary variable.
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-6">
+			<form method="post">
+				<div class="form-group">
+					<label asp-for="Number1" class="control-label"></label>
+					<input asp-for="Number1" value="@Model.Number1" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Number2" class="control-label"></label>
+					<input asp-for="Number2" value="@Model.Number2" class="form-control" />
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Swap" class="btn btn-default" />
+				</div>
+			</form>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-12 offset-md-4">
+			<div class="form-group">
+				<label class="control-label">@ViewData["Result"]</label>
+			</div>
+		</div>
+
+		<div>
+			<a href="/home">Go back</a>
+		</div>
+	</div>
+</div>

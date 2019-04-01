@@ -1,0 +1,60 @@
+﻿@model ConverterModel
+@{
+	ViewData["Title"] = "Test3";
+}
+
+<h1>Test3</h1>
+
+<div class="row">
+	<div class="col-md-6">
+		Write a function that takes a string containing a number in base X along with and integer of base
+		X. The function must return the integer value of that string/base pair.
+		<ul>
+			<li> E.g., int Convert.ToInt32(string number, int base); </li>
+			<li> Do NOT use .NET Framework’s Convert.ToInt32 or similar. </li>
+		</ul>
+	</div>
+	<div class="w-100"></div>
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header">
+				Header
+			</div>
+			<div class="card-body">
+				<form method="post">
+					<div class="form-group col-sm-12 col-md-4">
+						<label asp-for="BaseId" class="control-label"></label>
+						<select asp-for="BaseId" class="form-control" asp-items="ViewBag.Bases"></select>
+					</div>
+					<div class="form-group  col-sm-12 col-md-4">
+						<label asp-for="Value"></label>
+						<input asp-for="Value" class="form-control" />
+					</div>
+
+
+					<div class="form-group  col-sm-12 col-md-4">
+						<input type="submit" value="Get int value" class="btn btn-default" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100"></div>
+	@if (ViewData["Result"] != null) {
+		<div class="col-md-4 offset-md-1">
+			<div class="alert alert-info" role="alert">
+				<div class="form-group">
+					<label class="control-label">int value: </label>
+					<b><label class="control-label">@ViewData["Result"]</label></b>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="w-100"></div>
+	<div>
+		<a href="/home">Go back</a>
+	</div>
+</div>

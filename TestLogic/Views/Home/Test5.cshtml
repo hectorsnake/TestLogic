@@ -1,0 +1,40 @@
+﻿@using TestLogic.Models
+@model CompressModel
+@{
+	ViewData["Title"] = "Test5";
+}
+
+<h1>Test5</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			Write a function to perform basic string compression using the counts of repeated characters;
+			e.g. "aabcccccaaa" would become "a2b1c5a3". If the compressed string would not become
+			smaller than the original string, just print the original string.
+			<p></p>
+		</div>
+		<div class="w-100"></div>
+		<div class="col-md-6">
+			<form method="post">
+				<div class="form-group">
+					<label asp-for="StringValue" ></label>
+					<input asp-for="StringValue" class="form-control" />
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Compress" class="btn btn-default" />
+				</div>
+			</form>
+		</div>
+		<hr />
+		<div class="w-100"></div>
+		<div class="col-md-12 offset-md-1">
+			<div class="form-group">
+				<label class="control-label">@ViewData["Result"]</label>
+			</div>
+		</div>
+
+		<div>
+			<a href="/home">Go back</a>
+		</div>
+	</div>
+</div>
